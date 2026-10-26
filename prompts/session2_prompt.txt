@@ -1,0 +1,18 @@
+YZM301 Teardown Sprint ödevinin "Oturum 2: Temiz Oda (Clean Room) Yazım" aşamasındayız. 
+Bu oturumda Ghidra çıktılarını görmeden, YALNIZCA projedeki SPEC.md kabul kriterlerini ve CONTRACT.md standartlarını temel alarak hesaplama motorunu ve CLI uygulamasını yazacağız.
+
+Konumuz: K2 - t testi, eşleştirilmiş ortalama (t-paired).
+
+Gereksinimler:
+1. Python dilinde `src/cli.py` dosyasını oluştur. Dağılım fonksiyonları için `scipy` kütüphanesini kullan.
+2. CLI Komut Sözleşmesi:
+   - Çağrı Biçimi: python src/cli.py --test t-paired --mode a-priori --tails <1|2> --d <float> --alpha <float> --power <float>
+   - Çıktı (Tek satır JSON): {"n_total": <int>, "actual_power": <float>, "critical": <float>, "df": <int>, "ncp": <float>}
+   - Hatalı Girdilerde: {"error": "<açıklama>"} çıktısı verilmeli ve sıfırdan farklı bir çıkış kodu (sys.exit(1)) dönülmelidir.
+3. Matematik Mantığı:
+   - A-priori modunda istenen gücü (power) sağlayan en küçük N (n_total) değerini bulana kadar iterasyon yap ve N'yi yukarı yuvarla (math.ceil).
+   - df = n_total - 1
+   - ncp (noncentrality parameter) = d * sqrt(n_total)
+4. `tests/test_cli.py` dosyasını oluştur: `oracle/` klasöründeki referans veriler ile CLI çıktısını kıyaslayan diferansiyel testleri yaz.
+
+Kodları ve test dosyasını fiziki olarak projeye yazıp çalıştır.

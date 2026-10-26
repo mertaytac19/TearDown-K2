@@ -1,0 +1,11 @@
+Çalışma ortamımız hazır, 30 adet kâhin (oracle) verisi toplandı ve GPower.exe dizinde mevcut. Şimdi REA ve Ghidra kullanarak tersine mühendislik (Oturum 1) aşamasına geçiyoruz. 
+
+Amacımız 't testi, eşleştirilmiş ortalama' (t-test, matched pairs) hesaplama motorunu bulmak. 
+
+Şu adımları KESİNLİKLE kaynak kod üretmeden, sadece analiz ederek gerçekleştir:
+1. GPower.exe'yi Ghidra ile incele ve t-paired testi için N (örneklem) arama iterasyonunu, df (serbestlik derecesi) hesabını ve yukarı yuvarlama davranışlarını içeren fonksiyonu/algoritmayı bul.
+2. Bulduğun matematiksel kuralları, iterasyonun durma koşulunu ve yuvarlama davranışlarını SPEC.md dosyasına Gherkin (Given, When, Then) formatında kabul kriterleri olarak yaz.
+3. SPEC.md'ye yazdığın her bir iddiayı LEDGER.md dosyasına ekle. Kılavuzda yazanları [DOK], Ghidra'dan bulduğun fonksiyon adresi/dize referanslarını [REA], kendin tahmin ettiğin çıkarımları [AJAN] olarak etiketle. Puan yalnızca [REA] satırlarından geleceği için doğrudan binary kanıtlarına odaklan.
+4. Kılavuzda OLMAYAN davranışları (yuvarlama mantığı, iterasyonun durma koşulu, geçersiz girdiye tepki vb.) özellikle arayıp belgeye ekle.
+
+İşlemi tamamladığında bana sadece SPEC.md ve LEDGER.md dosyalarının hazır olduğunu ve içeriğinin bir özetini raporla.
