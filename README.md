@@ -41,7 +41,7 @@ Oracle klasöründeki **30** G*Power ekran görüntüsünden türetilen **8** te
 - PyTest ile çalışan **diferansiyel test seti** (`tests/test_cli.py`) **%100 uyum** gösterdi ve **2** test başarıyla geçti.
 
 ## 6. Demo Video
-[60‑saniyelik CLI Demo Video](https://example.com/demo-video)
+[https://youtu.be/QbArww055lE
 
 ## 7. Atıf (Citations)
 - Faul, F., Erdfelder, E., Lang, A.-G., & Buchner, A. (2007, 2009). *G*Power 3: A flexible statistical power analysis program for the social, behavioral, and biomedical sciences.*
